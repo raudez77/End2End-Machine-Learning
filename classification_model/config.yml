@@ -1,0 +1,69 @@
+# Package Overview
+package_name : classification_model
+
+# Data Files
+training_data_file : train.csv
+test_data_file: test.csv
+
+# Pipelines
+pipeline_name : classification_model_pipe
+pipeline_save_file: classification_model_output_v
+
+# === Variables ====
+
+# The variables we are attempting to predict (Survived)
+target : Survived
+
+
+# Columns to be selected 
+features:
+  - Pclass
+  - Sex
+  - Age
+  - SibSp
+  - Parch
+  - Fare
+  - Embarked
+
+# Test size
+test_size: 0.2
+
+# Random_State
+random_state : 104
+
+# Learning rate
+learning_rate : 0.05
+
+# Categorical Vars with nan 
+one_vars_with_nan:
+  - Embarked
+  - Pclass
+
+categorical_with_nan:
+  - Pclass
+  - Sex
+  - Embarked
+
+# Numerical Var with nan 
+numerical_vars_with_na :
+  - Age
+  - Fare
+
+# Onehote_vars
+onehot_vars :
+  - Embarked
+  - Pclass
+
+# Columns to drop
+columns_to_drop:
+  - PassengerId
+  - Name
+  - Ticket
+  - Cabin
+
+# Dictionary
+map_sex :
+  - Sex
+mapping_sex:
+  male : 0
+  female : 1
