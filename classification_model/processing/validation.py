@@ -7,25 +7,25 @@ import pandas as pd
 from pydantic import BaseModel, ValidationError
 
 
-def drop_na_input(input_data: pd.DataFrame,
-                  config: Expression) -> pd.DataFrame:
+def drop_na_input(input_data: pd.DataFrame, features_: List) -> pd.DataFrame:
     """ Check model input and return only feature selected"""
     validate_data = input_data.copy()
-    validate_data[config.model_config.features]
+    validate_data = validate_data[features_]
     return validate_data
 
 
 def validate_inputs(input_data: pd.DataFrame,
-                    config: Expression) -> Tuple[pd.DataFrame, Optional[dict]]:
+                    features_: List) -> Tuple[pd.DataFrame, Optional[dict]]:
     """ check model inputs"""
     relevant_data = input_data.copy()
-    validated_data = drop_na_input(input_data=relevant_data, config=config)
+    validated_data = drop_na_input(input_data=relevant_data,
+                                   features_=features_)
     errors = None
     try:
         # Replace Nan Values
         TitanicDataInputs(inputs=validated_data.replace({
             np.nan: None
-        }).to_dict(orient='records'))
+        }).to_dict(orient='records'))  #ignored
     except ValidationError as error:
         errors = error.json()
 
