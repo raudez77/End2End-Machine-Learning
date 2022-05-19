@@ -8,7 +8,7 @@ from config.core import config
 from pipeline import Titanic_pipe
 from classification_model import __version__ as _ver
 
-# Reading data
+# Reading data file
 data = data_inputting(filename=config.app_config.training_data_file)
 
 # Split data
@@ -25,5 +25,3 @@ Titanic_pipe.fit(X_train, y_train)
                 pipeline_name=config.app_config.pipeline_save_file,
                 version=_ver,
                 remove_previous_version=True))
-
-Titanic_pipe.predict(X_test)
