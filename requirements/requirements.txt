@@ -1,0 +1,8 @@
+#All requires libary to run this model
+numpy==1.19.3
+pandas==1.1.5
+pydantic==1.9.0
+sckit-learn==1.0.2
+strictyaml==1.6.1
+feature-engine==1.3.0
+joblib==0.13.2
