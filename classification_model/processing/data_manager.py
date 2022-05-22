@@ -3,7 +3,6 @@ import pandas as pd
 from pathlib import Path
 from sklearn.pipeline import Pipeline
 import joblib
-from yaml import dump
 
 File_ = Path(__file__).resolve().parent.parent
 DATA_STORE = File_ / "datasets"

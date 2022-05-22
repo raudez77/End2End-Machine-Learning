@@ -22,7 +22,7 @@ def make_prediction(*, input_data: ty.Union[pd.DataFrame, dict]) -> dict:
     results = {"predictions": None, "Version": _version, "errors": errors}
 
     if not errors:
-        predictions_ = _titanic_pipeline.predict(
+        predictions_ = _titanic_pipeline.predict_proba(
             X=validated_data[config.model_config.features])
         results = {
             "predictions": [pred for pred in predictions_],
