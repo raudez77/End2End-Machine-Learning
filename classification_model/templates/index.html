@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=7.5">
+    <title>Titanic Machine Learning Disaster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="static/fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="static/css/magnific-popup.css"> 
+    <link rel="stylesheet" href="static/css/templatemo-ocean-vibes.css"> 
+<!--
+    
+TemplateMo 554 Ocean Vibes
+
+https://templatemo.com/tm-554-ocean-vibes
+
+-->
+</head>
+<body>
+    <header class="tm-site-header">
+        <h1 class="tm-mt-0 tm-mb-15"><span class="tm-color-primary">Titanic</span> <span class="tm-color-gray-2">Disaster</span></h1>
+        <em class="tm-tagline tm-color-light-gray">Machine Learning</em>
+    </header>
+
+    <!-- Video banner 400 px height -->
+    <div id="tm-video-container">
+        <video autoplay muted loop id="tm-video">
+            <source src= {{ url_for('static', filename="Titanic-intro.mp4") }} type="video/mp4">
+        </video>  
+        <i id="tm-video-control-button" class="fas fa-pause"></i>
+    </div>
+
+    <div class="tm-container">
+        <nav class="tm-main-nav">
+            <ul id="inline-popups">
+                <li class="tm-nav-item">
+                    <a href="#intro" data-effect="mfp-move-from-top" class="tm-nav-link">
+                        Introduction
+                        <i class="fas fa-3x fa-water"></i>
+                    </a>                
+                </li>
+                <li class="tm-nav-item">
+                    <a href="#about" data-effect="mfp-move-from-top" class="tm-nav-link">
+                        About AI
+                        <i class="fas fa-3x fa-tint"></i>
+                    </a>
+                </li>
+                <li class="tm-nav-item">
+                    <a href="#TheTitanicAI" data-effect="mfp-move-from-top" class="tm-nav-link">
+                       The AI in Action
+                        <i class="far fa-3x fa-smile"></i>
+                    </a>
+                </li>
+                <li class="tm-nav-item">
+                    <a href="#contact" data-effect="mfp-move-from-top" class="tm-nav-link">
+                        Contact
+                        <i class="far fa-3x fa-comments"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Popup itself -->
+    <div id="intro" class="popup mfp-with-anim mfp-hide tm-bg-gray">
+            <a href="#" class="tm-close-popup">
+                Return Home
+                <i class="fas fa-times"></i>
+            </a>
+            <div class="tm-row tm-intro-row">
+                <div class="tm-col tm-bg-white tm-intro-pad">
+                    <h2 class="tm-color-primary tm-page-title">Introducing</h2>
+                    <div class="tm-row tm-content-row">
+                        <div class="tm-col-6 tm-intro-col-l">
+                            <p>
+                                This is a Machine learning deployment example: 
+                                This <strong>AI</strong> was trained to calculate anyone's chances of surviving the Titanic Disaster. </p>
+                            <p>
+                                You can type some hypothetical information <strong>such as</strong></a>
+                                your age, gender, city and many more to calculate your chances of surviving.</p>
+                            <p class="tm-mb-0">
+                                <strong>Please be aware</strong> "this is not a game" but a educational and graphical way to better understand how AI is deployed, 
+                                and <strong>We must respect</strong> the memories of those whose died during this disaster.
+                            </p>
+                        </div>
+                        <div class="tm-col-6">
+                            <p>
+                                This website, animations and designed was not created by me 
+                                and all credits must go to <strong>"templatemo.com"</strong>
+                            </p>
+                            <div class="tm-text-center">
+                                <a href="#" class="tm-btn tm-btn-primary mfp-prevent-close tm-btn-next">
+                                    Next Page
+                                </a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>                
+            </div> 
+        </div>
+
+    <div id="about" class="popup mfp-with-anim mfp-hide tm-bg-gray">
+            <a href="#" class="tm-close-popup">
+                Return Home
+                <i class="fas fa-times"></i>
+            </a>
+            <h2 class="tm-color-primary tm-about-col tm-mb-40 tm-page-title">About this AI</h2>
+            <div class="tm-row tm-about-row">
+                <div class="tm-col tm-about-col tm-about-left">                    
+                    <img src="img/titanic_intro.jpeg" alt="Image" class="tm-mb-30">
+                    <p class="tm-mb-40">
+                    This AI was trained using the
+                    <a rel="nofollow" href="https://www.kaggle.com/c/titanic" class="tm-color-primary">Kaggle Titanic Competition data set.</a>
+                    </p>
+                     <p><em class="tm-mb-30 tm-color-light-gray">
+                         It was built using CI/CD methodology, and End to End Machine Learning Cycle. It was trained to learn patterns from 
+                         the people in the titanic such their age, gender, number of relatives that were traveling with them and many more.
+                        </em>
+                    <p>
+                        <a>In a nutshell: </a>This AI gives a numerical importance to each of these elements (Sex, Age, Cabin, Class) known as weights. Then it will compare
+                        the information that you might provide with people who had things in common with you and, finally, label your results as survived / no survived 
+                    </p>
+                   
+                </div>
+                
+                <div class="tm-col tm-about-col">
+                    <p class="tm-mb-40">
+                        The AI training process is far more complicated, and if you are interesting in knowing how it works, You can visit 
+                        <a rel="nofollow" href="https://www.kaggle.com/code/megr25/titanic-keras-top-5-xgboost-and-dnn" 
+                        class="tm-color-primary">my Post in Kaggle</a>
+                        <span class="tm-color-primary">to learn how to train</span> 
+                        this kind of AI, or <a rel="nofollow" href="https://github.com/raudez77" 
+                        class="tm-color-primary">Check my GitHub Repository </a>to learn some Deployment Techniques
+                    </p>
+                    <p>
+                        <Strong>About me:</Strong> My name is <a href="https://www.linkedin.com/in/marvin-garcia-917127184/">
+                            <span class="tm-color-primary">Marvin Garcia</span>, I am Data Scientist and Machine Learning Practitioner with two Masters
+                    (MBA & MSIM). Who loves to develop AI and deploy Machine learning models</a>, If you are interestingin Learning more about AI, visit my Kaggle Profile
+                    or download the whole code from my repository in GitHub. Now let's jump to the main feature <span class="tm-color-primary">AI in Action.</span>
+                    </p>
+                    <div class="tm-text-center">
+                    <a href="#" class="tm-btn tm-btn-primary mfp-prevent-close tm-btn-next">
+                        Next Page
+                    </a>
+                </div> 
+                </div>  
+                            
+            </div>
+        </div>
+
+    <div id="TheTitanicAI" class="popup mfp-with-anim mfp-hide tm-bg-gray">
+        <a href="#" class="tm-close-popup">
+            Return Home
+            <i class="fas fa-times"></i>
+        </a>
+        <h2 class="tm-contact-col tm-color-primary tm-page-title tm-mb-40">Please provide the following Information</h2>
+        <h4 class="tm-contact-col tm-mb-40">Please fill out the following form, and then click on send. The AI will strat calculating your chances of surviving</h4>
+        <div class="tm-row tm-contact-col">
+            <div class="tm-col tm-contact-row">
+                
+                <!-- Do you need a working HTML contact form?
+                Please visit https://templatemo.com/contact page -->
+                
+                <form id="contact-form" action="/predict" method="POST" class="tm-contact-form">
+                     <!-- Name -->
+                    <div class="form-group">
+                        <b>Your Name:</b>
+                        <input type="text" id ="name" name="name_" class="form-control rounded-0" placeholder="Full Name" required />
+                    </div>
+
+                    <!-- Sex -->
+                    <div class="form-group">
+                        <b>Select one option:</b>
+                        <select class="form-control" id="Sex" name="Sex" >
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+          
+                    <!-- Age -->
+                    <div class="form-group">
+                        <b>Type your age:</b>
+                        <input type="number" name="Age" min="1" max="80" class="form-control rounded-0" placeholder="Your Age" required />
+                    </div>
+
+                    <!-- Embarked -->
+                    <div class="form-group"> 
+                        <b>Select one city:</b>
+                        <select class="form-control" name="Embarked" required>
+                            <option value="C">Cherbourg</option>
+                            <option value="Q">Queenstown</option>
+                            <option value="S">Southampton</option>
+                        </select>
+                    </div>
+
+                    <!-- Parch -->
+                    <div class="form-group">
+                        <b>Parents or Childrens traveling with you:</b>
+                        <input type="number" name="Parch" min="0" max="10" class="form-control rounded-0" placeholder="Number of parents or children" required />
+                    </div>
+
+                    <!-- Sibsp -->
+                    <div class="form-group">
+                        <b>Siblings traveling with you:</b>
+                        <input type="number" name="SibSp" min="0" max="10" class="form-control rounded-0" placeholder="Number of siblings" required />
+                    </div>
+
+                    <!-- Pclass -->
+                    <div class="form-group"> 
+                        <b>Choose one class:</b>
+                        <select class="form-control" name="Pclass" required>
+                            <option value="1">1st Class</option>
+                            <option value="2">2nd Class</option>
+                            <option value="3">3rd Class</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group tm-text-right">
+                        <button type="submit" class="tm-btn tm-btn-primary">Predict</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="tm-col tm-contact-col tm-contact-col-r">
+                <div class="mapouter tm-mb-40">
+                    <div class="titanic-calculating">
+                        <iframe width="100%" height="520" id="titanic-calculating"
+                            src="img/tianic_sank.jpg" alt="Image" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+            </div> 
+         </div>
+
+
+     <!-- <div id="contact" class="popup mfp-with-anim mfp-hide tm-bg-gray">
+            <a href="#" class="tm-close-popup">
+                Return Home
+                <i class="fas fa-times"></i>
+            </a>
+            <h2 class="tm-contact-col tm-color-primary tm-page-title tm-mb-40">Please provide the following Information</h2>
+            <div class="tm-row tm-contact-row">
+                <div class="tm-col tm-contact-col">
+                
+                <!-- Do you need a working HTML contact form?
+                	Please visit https://templatemo.com/contact page -->
+                    
+                    <!-- <form id="contact-form" action="#" method="post" class="tm-contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name_" class="form-control rounded-0" placeholder="Full Name" required />
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="sex" name="sex_">
+                                <option value="-">Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control rounded-0" placeholder="Email" required />
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="contact-select" name="inquiry">
+                                <option value="-">Subject</option>
+                                <option value="sales">Sales &amp; Marketing</option>
+                                <option value="creative">Creative Design</option>
+                                <option value="uiux">UI / UX</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="8" name="message" class="form-control rounded-0" placeholder="Message" required=></textarea>
+                        </div>
+
+                        <div class="form-group tm-text-right">
+                            <button type="submit" class="tm-btn tm-btn-primary">Send it now</button>
+                        </div>
+                    </form>
+                </div> -->
+                <!-- <div class="tm-col tm-contact-col tm-contact-col-r">
+                    Map
+                    <div class="mapouter tm-mb-40">
+                        <div class="gmap_canvas">
+                            <iframe width="100%" height="520" id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+                    </div>
+
+                    Address
+                    <address class="tm-mb-40">
+                        110-220 Nam vel ultricies mauris,<br>
+                        Et gravida eros 10220
+                    </address>
+
+                    <!-- Links -->
+                    <!-- <ul class="tm-contact-links">
+                        <li>
+                            <a href="tel:0100200340">
+                                <i class="fas fa-phone tm-contact-link-icon"></i>
+                                Tel: 010-020-0340
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@company.com">
+                                <i class="fas fa-at tm-contact-link-icon"></i>
+                                Email: info@company.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.company.com">
+                                <i class="fas fa-link tm-contact-link-icon"></i>
+                                URL: www.company.com
+                            </a>
+                        </li>
+                    </ul> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> --> -->
+    </div> -->
+
+    <footer class="tm-footer">
+        <span>Copyright &copy; Marvin Garcia</span>
+        <span>AI Designed by 
+        <a href="https://www.linkedin.com/in/marvin-garcia-917127184/" title="free website templates" target="_parent" rel="nofollow">Marvin Garcia</a></span>
+</footer>
+
+    <script src="static/js/jquery-3.4.1.min.js"></script>
+    <script src="static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="static/js/isotope.pkgd.min.js"></script>
+    <script src="static/js/jquery.magnific-popup.min.js"></script>    
+    <script src="static/js/templatemo-script.js"></script>
+</body>
+</html>
