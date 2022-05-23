@@ -1,0 +1,15 @@
+version: '3'
+services:
+  website:
+    # This fuction force Dockerfile.dev
+    build:
+      # where are the files coming from (look at the current dir)
+      context: .
+
+      # Look for this file
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5000:5000"
+    volumes:
+      - /app/classification_model/templates/
+      - .:/app
