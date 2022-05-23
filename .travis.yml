@@ -7,7 +7,7 @@ services:
 
 # Do before : -f force -t anynameyouwantforyourimage
 before_install: 
-  - docker build -t raudez77/end2end-machine-learning -f Dockerfile .
+  - docker build -t raudez77/end2end-machine-learning .
 
 # Run test
 # Script contents all script to run
@@ -25,12 +25,14 @@ deploy:
   env: "Titanicdemo-env"
   # Go Services- S3 - look for yout us-west-2 elastickbeanstalk
   bucket_name: "elasticbeanstalk-us-west-2-082124557004"
-  bucket_path : "titanic_demo"
+  bucket_path : "docker"
   on:
     branch: master
   # Create Acces key in Travis
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: "$AWS_SECRET_KEY"
+  access_key_id: 
+    secure: "$AWS_ACCESS_KEY"
+  secret_access_key: 
+    secure: "$AWS_SECRET_KEY"
   skip_cleanup: true
 
 
