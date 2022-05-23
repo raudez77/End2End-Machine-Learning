@@ -7,10 +7,10 @@ services:
 
 # Do before : -f force -t anynameyouwantforyourimage
 before_install: 
-  - docker build -t raudez77/End2End-Machine-Learning -f Dockerfile.dev .
+  - docker build -t raudez77/end2end-machine-learning -f Dockerfile.dev .
 
 
 # Run test
 # Script contents all script to run
 script:
-  - docker run raudez77/End2End-Machine-Learning python test.py -- --coverage
+  - docker run raudez77/end2end-machine-learning python test.py -- --coverage
