@@ -18,7 +18,7 @@ script:
 deploy:
   # Use this Saas for deployment
   provider: elasticbeanstalk
-  region: "us-west-2"
+  region: us-west-2
   # Application name
   app: "titanic_demo"
   # Enviroment
@@ -29,10 +29,7 @@ deploy:
   on:
     branch: master
   # Create Acces key in Travis
-  access_key_id: 
-    secure: "$AWS_ACCESS_KEY"
-  secret_access_key: 
-    secure: "$AWS_SECRET_KEY"
-  skip_cleanup: true
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
 
 
