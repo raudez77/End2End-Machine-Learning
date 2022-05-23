@@ -1,5 +1,3 @@
-# super user permision
-sudo: required
 
 #autom install a copy of docker 
 services:
@@ -24,12 +22,15 @@ deploy:
   # Enviroment
   env: "Titanicdemo-env"
   # Go Services- S3 - look for yout us-west-2 elastickbeanstalk
-  bucket_name: "elasticbeanstalk-us-west-2-082124557004"
+  bucket_name: "titanic-bucket-model"
   bucket_path : "docker"
-  on:
-    branch: master
+
   # Create Acces key in Travis
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
+  on:
+    branch: master
+ 
+  
 
 
