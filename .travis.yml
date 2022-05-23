@@ -22,7 +22,7 @@ deploy:
   # Enviroment
   env: "Titanicdemo-env"
   # Go Services- S3 - look for yout us-west-2 elastickbeanstalk
-  bucket_name: "titanic-bucket-model"
+  bucket_name: "elasticbeanstalk-us-west-2-082124557004"
   bucket_path : "docker"
 
   # Create Acces key in Travis
