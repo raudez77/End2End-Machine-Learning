@@ -7,7 +7,7 @@ services:
       context: .
 
       # Look for this file
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     ports:
       - "80:80"
    
