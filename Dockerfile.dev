@@ -1,3 +1,4 @@
+#This is Docker for local and development
 FROM python:3.7-slim-bullseye
 
 WORKDIR /app
@@ -9,6 +10,8 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 # Install dependencies:
 COPY . /app
 RUN pip install -r /app/requirements/requirements.txt
+
+#No Port because I can specify at running docker 
 
 # Run the application:
 CMD ["python", "/app/classification_model/for_production.py"]

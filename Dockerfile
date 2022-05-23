@@ -1,3 +1,4 @@
+# This file is for Amazon Elastick Beanstalk
 FROM python:3.7-slim-bullseye
 
 WORKDIR /app
@@ -10,6 +11,5 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 COPY . /app
 RUN pip install -r /app/requirements/requirements.txt
 
-EXPOSE 80
 # Run the application:
 CMD ["python", "/app/classification_model/for_production.py"]

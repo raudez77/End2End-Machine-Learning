@@ -1,7 +1,8 @@
+# Docker compose for Amazon
 version: '3'
 services:
   website:
-    # This fuction force Dockerfile.dev
+    # This fuction force Dockerfile
     build:
       # where are the files coming from (look at the current dir)
       context: .

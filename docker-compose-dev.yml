@@ -1,3 +1,4 @@
+# Docker compose for Development
 version: '3'
 services:
   website:
@@ -9,4 +10,8 @@ services:
       # Look for this file
       dockerfile: Dockerfile.dev
     ports:
-      - "80:80"
+      - "5000:5000"
+    
+    volumes:
+      - .:/app
+      - /app/classification_model/templates/
