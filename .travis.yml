@@ -26,11 +26,11 @@ deploy:
   # Go Services- S3 - look for yout us-west-2 elastickbeanstalk
   bucket_name: "elasticbeanstalk-us-west-2-082124557004"
   bucket_path : "titanic_demo"
-on:
-  branch: master
-# Create Acces key in Travis
-access_key_id: $AWS_ACCESS_KEY
-secret_access_key:
-  secure: "$AWS_SECRET_KEY"
+  on:
+    branch: master
+  # Create Acces key in Travis
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: "$AWS_SECRET_KEY"
+  skip_cleanup: true
 
 
