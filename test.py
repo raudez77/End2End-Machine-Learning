@@ -1,1 +1,1 @@
-print("good to go --> Jumo to deployment")
+print("good to go --> jump to deployment")
