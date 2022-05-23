@@ -1,0 +1,16 @@
+# super user permision
+sudo: required
+
+#autom install a copy of docker 
+services:
+  - docker
+
+# Do before : -f force -t anynameyouwantforyourimage
+before_install: 
+  - docker build -t raudez77/End2End-Machine-Learning -f Dockerfile.dev .
+
+
+# Run test
+# Script contents all script to run
+script:
+  - docker run raudez77/End2End-Machine-Learning python test.py -- --coverage
