@@ -1,0 +1,39 @@
+# super user permision
+sudo: required
+
+#autom install a copy of docker 
+services:
+  - docker
+
+# Do before : -f force -t anynameyouwantforyourimage
+before_install: 
+  - docker build -t raudez77/end2end-machine-learning -f Dockerfile.dev .
+
+# Run test
+# Script contents all script to run
+script:
+  - docker run raudez77/end2end-machine-learning python test.py -- --coverage
+
+#Deploy into Amazon ElasticBeanstalk
+deploy:
+  # Use this Saas for deployment
+  provider: elasticbeanstalk
+  region: "us-west-2"
+  # Application name
+  app: "titanic_demo"
+  # Enviroment
+  env: "Titanicdemo-env"
+  # Go Services- S3 - look for yout us-west-2 elastickbeanstalk
+  bucket_name: "elasticbeanstalk-us-west-2-082124557004"
+  bucket_path : "titanic_demo"
+on:
+  branch: master
+# Create Acces key in Travis
+access_key_id: $AWS_ACCESS_KEY
+secret_access_key:
+<<<<<<< HEAD
+  secure: "$AWS_SECRET_KEY"
+=======
+  secure: "$AWS_SECRET_KEY"
+
+>>>>>>> 399938e14ce0558c9f03a6ea7610d4498b271af7
