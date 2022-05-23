@@ -31,9 +31,6 @@ on:
 # Create Acces key in Travis
 access_key_id: $AWS_ACCESS_KEY
 secret_access_key:
-<<<<<<< HEAD
-  secure: "$AWS_SECRET_KEY"
-=======
   secure: "$AWS_SECRET_KEY"
 
->>>>>>> 399938e14ce0558c9f03a6ea7610d4498b271af7
+
