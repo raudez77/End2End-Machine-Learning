@@ -16,18 +16,17 @@ script:
 deploy:
   # Use this Saas for deployment
   provider: elasticbeanstalk
-  region: us-west-2
+  region: "us-west-2"
   # Application name
   app: "titanic_demo"
   # Enviroment
   env: "Titanicdemo-env"
   # Go Services- S3 - look for yout us-west-2 elastickbeanstalk
   bucket_name: "elasticbeanstalk-us-west-2-082124557004"
-  bucket_path : "docker"
 
   # Create Acces key in Travis
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
   on:
     branch: master
  
