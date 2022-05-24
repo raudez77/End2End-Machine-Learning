@@ -14,7 +14,7 @@ from config.core import config
 # Initiating Flask
 application = Flask(__name__,
                     template_folder='templates',
-                    static_folder='templates/static')
+                    static_url_path='templates/static')
 
 
 # Rendering Website
@@ -65,5 +65,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get('PORT', 8000))
-    application.run(debug=True, host='0.0.0.0', port=port)
+    application.debug = True
+    application.run(port=8000)
