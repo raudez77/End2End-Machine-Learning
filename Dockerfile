@@ -11,7 +11,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 COPY . /app
 RUN pip install -r /app/requirements/requirements.txt
 
-EXPOSE 8000
+EXPOSE 5000
 
 # Run the application:
 CMD ["python", "/app/classification_model/application.py"]

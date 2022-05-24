@@ -1,7 +1,7 @@
 # Docker compose for Development
 version: '3'
 services:
-  website:
+  website_testing:
     # This fuction force Dockerfile.dev
     build:
       # where are the files coming from (look at the current dir)
@@ -10,8 +10,8 @@ services:
       # Look for this file
       dockerfile: Dockerfile.dev
     ports:
-      - "80:80"
+      - "5000:5000"
     
     volumes:
       - .:/app
-      - /app/classification_model/templates/
+      - /app/classification_model

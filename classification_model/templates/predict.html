@@ -6,7 +6,6 @@
     <title>Titanic Machine Learning Disaster</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
     <link rel="stylesheet" href="static/fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
-    <link rel="stylesheet" href="statis/css/magnific-popup.css"> 
     <link rel="stylesheet" href="static/css/templatemo-ocean-vibes.css"> 
 
 </head>
@@ -16,8 +15,7 @@
         <em class="tm-tagline tm-color-light-gray">Machine Learning</em>
     </header>
 
-    <div class="popup" class = "overlay">
-        <div class ="popup tm-mb-15"></div>
+    <div class="tm-container">
         <h2 class = "tm-mt-0 tm-mb-15"> Your chances of surviving are : {{ prediction_text  }} %</h2>
         <div id = "prediction_text" class ="content">
             <p><strong>You chose to travel in #{{prediction_class}} Class</strong>, but did you know that your gender  
@@ -40,7 +38,6 @@
     <script src="static/js/jquery-3.4.1.min.js"></script>
     <script src="static/js/imagesloaded.pkgd.min.js"></script>
     <script src="static/js/isotope.pkgd.min.js"></script>
-    <script src="static/js/jquery.magnific-popup.min.js"></script>    
     <script src="static/js/templatemo-script.js"></script>
 </body>
 </html>

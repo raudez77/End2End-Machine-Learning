@@ -3,7 +3,7 @@ import sys
 import os
 sys.path.append(".")
 import numpy as np
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, url_for
 from pydantic import validate_arguments
 from sklearn.model_selection import train_test_split
 from processing.data_manager import data_inputting, DATA_STORE
@@ -14,12 +14,12 @@ from config.core import config
 # Initiating Flask
 application = Flask(__name__,
                     template_folder='templates',
-                    static_url_path='templates/static')
+                    static_folder='templates/static')
 
 
 # Rendering Website
+# @application.route("/")
 @application.route("/")
-@application.route("/home")
 def home():
     return render_template("index.html")
 
@@ -66,4 +66,4 @@ def predict():
 
 if __name__ == "__main__":
     application.debug = True
-    application.run(port=8000)
+    application.run(port=5000)

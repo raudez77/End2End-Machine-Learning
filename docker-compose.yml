@@ -1,7 +1,7 @@
 # Docker compose for Amazon
 version: '3'
 services:
-  deployment:
+  aws_deployment:
     # This fuction force Dockerfile
     build:
       # where are the files coming from (look at the current dir)
@@ -10,5 +10,5 @@ services:
       # Look for this file
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "5000:5000"
    
