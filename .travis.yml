@@ -18,12 +18,12 @@ deploy:
   provider: elasticbeanstalk
   region: "us-west-2"
   # Application name
-  app: "titanic_demo"
+  app: "docker_titanic"
   # Enviroment
-  env: "Titanicdemo-env"
+  env: "dockertitanic-env"
   # Go Services- S3 - look for yout us-west-2 elastickbeanstalk
   bucket_name: "elasticbeanstalk-us-west-2-082124557004"
-  bucket_path : "titanic_demo"
+  bucket_path : "dockertitanic-env"
 
   # Create Acces key in Travis
   access_key_id: "$AWS_ACCESS_KEY"
