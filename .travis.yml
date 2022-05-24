@@ -23,13 +23,14 @@ deploy:
   env: "dockertitanic-env"
   # Go Services- S3 - look for yout us-west-2 elastickbeanstalk
   bucket_name: "elasticbeanstalk-us-west-2-082124557004"
-  bucket_path : "dockertitanic-env"
+  bucket_path : "docker_titanic"
 
   # Create Acces key in Travis
-  access_key_id: "$AWS_ACCESS_KEY"
+  access_key_id: $AWS_ACCESS_KEY
   secret_access_key: "$AWS_SECRET_KEY"
   on:
     branch: master
+  skip_cleanup: true
  
   
 
