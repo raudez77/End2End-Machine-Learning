@@ -12,19 +12,19 @@ from predict import make_prediction
 from config.core import config
 
 # Initiating Flask
-app = Flask(__name__,
-            template_folder='templates',
-            static_folder='templates/static')
+application = Flask(__name__,
+                    template_folder='templates',
+                    static_folder='templates/static')
 
 
 # Rendering Website
-@app.route("/")
-@app.route("/home")
+@application.route("/")
+@application.route("/home")
 def home():
     return render_template("index.html")
 
 
-@app.route('/predict', methods=["POST"])
+@application.route('/predict', methods=["POST"])
 def predict():
     """ Rendering Result on the HTML"""
     features_ = {
@@ -65,5 +65,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get('PORT', 5000))
-    app.run(debug=True, host='0.0.0.0', port=port)
+    port = int(os.environ.get('PORT', 8000))
+    application.run(debug=True, host='0.0.0.0', port=port)

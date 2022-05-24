@@ -10,5 +10,5 @@ services:
       # Look for this file
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "8000:8000"
    

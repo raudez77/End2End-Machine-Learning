@@ -14,4 +14,4 @@ RUN pip install -r /app/requirements/requirements.txt
 #No Port because I can specify at running docker 
 
 # Run the application:
-CMD ["python", "/app/classification_model/for_production.py"]
+CMD ["python", "/app/classification_model/application.py"]
