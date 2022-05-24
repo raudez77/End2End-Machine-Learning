@@ -23,6 +23,7 @@ deploy:
   env: "Titanicdemo-env"
   # Go Services- S3 - look for yout us-west-2 elastickbeanstalk
   bucket_name: "elasticbeanstalk-us-west-2-082124557004"
+  bucket_path : "titanic_demo"
 
   # Create Acces key in Travis
   access_key_id: "$AWS_ACCESS_KEY"
