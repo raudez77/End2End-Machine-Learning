@@ -10,7 +10,7 @@ before_install:
 # Run test
 # Script Run all test
 script:
-  - docker run raudez77/end2end-machine-learning python data_manager_test.py -- --coverage
+  - docker run raudez77/end2end-machine-learning python pytest data_manager_test.py -- --coverage
 
 # #Deploy into Amazon ElasticBeanstalk
 # deploy:
