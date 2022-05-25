@@ -10,6 +10,7 @@ from processing.validation import validate_inputs
 
 pipeline_file_name = f"{config.app_config.pipeline_save_file}{_version}.pkl"
 _titanic_pipeline = load_pipeline(file_name=pipeline_file_name)
+print(type(_titanic_pipeline))
 
 
 def make_prediction(*, input_data: ty.Union[pd.DataFrame, dict]) -> dict:

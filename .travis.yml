@@ -8,29 +8,29 @@ before_install:
   - docker build -t raudez77/end2end-machine-learning -f Dockerfile .
 
 # Run test
-# Script contents all script to run
+# Script Run all test
 script:
-  - docker run raudez77/end2end-machine-learning python test.py -- --coverage
+  - docker run raudez77/end2end-machine-learning python data_manager_test.py -- --coverage
 
-#Deploy into Amazon ElasticBeanstalk
-deploy:
-  # Use this Saas for deployment
-  provider: elasticbeanstalk
-  region: "us-west-2"
-  # Application name
-  app: "docker_titanic"
-  # Enviroment
-  env: "Dockertitanic-env"
-  # Go Services- S3 - look for yout us-west-2 elastickbeanstalk
-  bucket_name: "elasticbeanstalk-us-west-2-082124557004"
-  bucket_path : "docker_titanic"
+# #Deploy into Amazon ElasticBeanstalk
+# deploy:
+#   # Use this Saas for deployment
+#   provider: elasticbeanstalk
+#   region: "us-west-2"
+#   # Application name
+#   app: "docker_titanic"
+#   # Enviroment
+#   env: "Dockertitanic-env"
+#   # Go Services- S3 - look for yout us-west-2 elastickbeanstalk
+#   bucket_name: "elasticbeanstalk-us-west-2-082124557004"
+#   bucket_path : "docker_titanic"
 
-  # Create Acces key in Travis
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: "$AWS_SECRET_KEY"
-  on:
-    branch: master
-  skip_cleanup: true
+#   # Create Acces key in Travis
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key: "$AWS_SECRET_KEY"
+#   on:
+#     branch: master
+#   skip_cleanup: true
  
   
 

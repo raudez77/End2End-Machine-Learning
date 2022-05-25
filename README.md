@@ -2,23 +2,21 @@
 
 ## Titanic 
 
-This is a simple Data set but a power example of using Machine learning techniques. 
-
+This is a simple Data set but a power example of using Machine learning techniques and CI/CD Techniques.
 
 ## What I've learned
 
 1. End to End Machine learning process.
-2. Pipelines Creating.
-3. Unit test.
-4. Collaborate with other teams using Git Github Docker .
-5. Deployment using AWS.
+2. Pipelines Wrapper .
+3. Unit testing & pytest.
+4. Collaborate with other teams using Git GitHub - Docker  - Travis.
+5. Deployment using AWS .
 6. Understanding and Practicing CI/CD methodology. 
-
 
 ## How to download 
 
 1. Copy / pull the repository. 
-2. Download Docker.
+2. Download Dockerfile for production or .devop for your localhost.
 3. Download all files.
 4. Run train.py to check each step taken during the pipeline process.
 5. Keep learning.
