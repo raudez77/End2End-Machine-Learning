@@ -1,5 +1,3 @@
-import pytest
-import numpy
 from sklearn.pipeline import Pipeline
 import sys
 sys.path.append("./classification_model")
