@@ -1,0 +1,4 @@
+[
+  "data_manager_test.py::Testing_Data_Manager::test_data_inputting",
+  "data_manager_test.py::Testing_Data_Manager::test_load_pipelines"
+]
